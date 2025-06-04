@@ -8,11 +8,7 @@ services:
     startCommand: uvicorn backend.main:app --host 0.0.0.0 --port 10000
     autoDeploy: true
 
-  - type: web
+  - type: static
     name: edas-frontend
-    env: node
-    region: oregon
-    plan: free
     buildCommand: cd app && npm install && npm run build
     staticPublishPath: app/build
-    autoDeploy: true
