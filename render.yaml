@@ -11,8 +11,6 @@ services:
   - type: web
     name: edas-admin-frontend
     env: static
-    region: oregon
-    plan: free
     buildCommand: cd EDAS/app/Admin && npm install && npm run build
     staticPublishPath: EDAS/app/Admin/build
     autoDeploy: true
