@@ -11,6 +11,6 @@ services:
   - type: web
     name: edas-admin-frontend
     env: static
-    buildCommand: cd EDAS/app/Admin && npm install && npm run build
-    staticPublishPath: EDAS/app/Admin/build
+    buildCommand: cd app/Admin && npm install && npm run build
+    staticPublishPath: app/Admin/build
     autoDeploy: true
