@@ -2,9 +2,17 @@ services:
   - type: web
     name: edas-backend
     env: python
-    region: oregon # or your preferred region
-    plan: free # or starter, standard, etc.
+    region: oregon
+    plan: free
     buildCommand: pip install -r requirements.txt
     startCommand: uvicorn backend.main:app --host 0.0.0.0 --port 10000
     autoDeploy: true
 
+  - type: web
+    name: edas-frontend
+    env: node
+    region: oregon
+    plan: free
+    buildCommand: cd app && npm install && npm run build
+    staticPublishPath: app/build
+    autoDeploy: true
