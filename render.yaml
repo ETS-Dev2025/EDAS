@@ -10,9 +10,9 @@ services:
         value: 10000
     workingDir: backend
 
-  - type: static
+  - type: web
     name: edas-frontend
-    env: static
+    env: node
     buildCommand: npm install && npm run build
     staticPublishPath: build
     workingDir: app
