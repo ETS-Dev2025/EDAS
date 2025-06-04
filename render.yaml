@@ -8,11 +8,9 @@ services:
     envVars:
       - key: PORT
         value: 10000
-    workingDir: backend
 
   - type: web
     name: edas-frontend
     env: node
     buildCommand: npm install && npm run build
     staticPublishPath: build
-    workingDir: app
