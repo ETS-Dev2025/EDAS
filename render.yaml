@@ -12,7 +12,6 @@ services:
     name: edas-admin-frontend
     env: static
     buildCommand: |
-      npm --prefix app/Admin install --legacy-peer-deps
-      npm --prefix app/Admin run build    
+      npm --prefix app/Admin install --legacy-peer-deps  
     staticPublishPath: app/Admin/build
     autoDeploy: true
